@@ -15,7 +15,7 @@ function Button(props) {
                 <div className="items">
                     <div className="left">
                         <div className="mr-4">
-                            <button className="selected" onClick={props.allRocket}>All</button>
+                            <button className="selected" autoFocus onClick={props.allRocket}>All</button>
                         </div>
                         <div className="mr-4">
                             <button className="upcoming" onClick={props.upcomingRocket}>Upcoming</button>

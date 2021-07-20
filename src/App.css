@@ -18,14 +18,14 @@
     cursor: pointer;
 }
 
-.items .selected {
-    background-color: #2867b2;
-    color: #fff;
-    box-shadow: 0 0 0 1px #2867b2;
-    opacity: 1;
-    border-radius: 3px;
-}
 
+.items button:focus {
+  background-color: #2867b2;
+  color: white;
+  box-shadow: 0 0 0 1px #2867b2;
+  opacity: 1;
+  border-radius: 3px;
+}
 .items button {
     margin: 10px;
     float: left;

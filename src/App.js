@@ -13,19 +13,23 @@ class App extends Component {
     super();
 
     this.state = {
-      rockets: []
+      rockets: [],
+      allrockets: []
     }
   }
 
-
-  componentDidMount() {
+  getRockets() {
     fetch("https://api.spacexdata.com/v4/rockets")
       .then((response) => response.json())
-      .then(rockets => this.setState({ rockets: rockets }))
+      .then(rockets => this.setState({ allrockets: rockets, rockets }))
+  }
+
+  componentDidMount() {
+    this.getRockets()
   }
 
   allRocketHandler = () => {
-    const all = this.state.rockets.filter(al => new Date(al.first_flight))
+    const all = this.state.allrockets
     this.setState({
       rockets: all
     })
@@ -33,7 +37,7 @@ class App extends Component {
   }
 
   upcomingRocketHandler = () => {
-    const upcoming = this.state.rockets.filter(el => new Date(el.first_flight) > new Date())
+    const upcoming = this.state.allrockets.filter(el => new Date(el.first_flight) > new Date())
     this.setState({
       rockets: upcoming
     })
@@ -41,7 +45,7 @@ class App extends Component {
   }
 
   pastRocketHandler = () => {
-    const past = this.state.rockets.filter(ps => new Date(ps.first_flight) < new Date())
+    const past = this.state.allrockets.filter(ps => new Date(ps.first_flight) < new Date())
     this.setState({
       rockets: past
     })
