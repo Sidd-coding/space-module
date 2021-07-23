@@ -1,11 +1,10 @@
-#root-img {
+/* #root-img {
   display: flex;
   flex: 1 1;
   flex-direction: column;
-}
-#root, body, html{
- 
-}
+} */
+
+/* Header.js File */
 .app_bar {
     height: 55px;
     width: 100%;
@@ -16,7 +15,8 @@
     flex-direction: row;
 }
 
-.app-bar {
+/* Button.js File */
+.app-bar { 
     border: 1px solid #ddd;
     margin: 0px;
     width: 100%;
@@ -39,7 +39,7 @@
 .items button {
     margin: 10px;
     float: left;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     border-radius: 2px;
     padding: 8px 22px;
     outline: black;
