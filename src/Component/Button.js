@@ -1,5 +1,5 @@
 import React from 'react';
-import DatePicker from './Date/DatePicker';
+// import DatePicker from './Date/DatePicker';
 import Mui from './Mui';
 
 // import DatePicker from 'react-datepicker';
@@ -11,23 +11,47 @@ function Button(props) {
     // const [selectedEndDate, setSelectedEndDate] = useState(null)
     return (
         <div className="app-bar">
-            <div className="content">
-                <div className="items">
-                    <div className="left">
-                        <div className="mr-4">
-                            <button className="selected" autoFocus onClick={props.allRocket}>All</button>
-                        </div>
-                        <div className="mr-4">
-                            <button className="upcoming" onClick={props.upcomingRocket}>Upcoming</button>
-                        </div>
-                        <div className="mr-4">
-                            <button className="past" onClick={props.pastRocket}>Past</button>
-                        </div>
-                        <div className="mui">
-                            Successful
+            <div className="filter mb-5">
+                <div className="container">
+                    <div className="items">
+                        <div className="left">
+                            <div className="mr_4">
+                                <button className="selected" autoFocus>All</button>
+                            </div>
+                            <div className="mr_4">
+                                <button className="">Upcoming</button>
+                            </div>
+                            <div className="mr_4">
+                                <button className="">Past</button>
+                            </div>
                             <Mui />
+                        </div>
 
-                            {/* <DatePicker
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+export default Button;
+// <div className="app-bar">
+//     <div className="content">
+//         <div className="items">
+//             <div className="left">
+//                 <div className="mr-4">
+//                     <button className="selected" autoFocus onClick={props.allRocket}>All</button>
+//                 </div>
+//                 <div className="mr-4">
+//                     <button className="upcoming" onClick={props.upcomingRocket}>Upcoming</button>
+//                 </div>
+//                 <div className="mr-4">
+//                     <button className="past" onClick={props.pastRocket}>Past</button>
+//                 </div>
+//                 <div className="mui">
+//                     Successful
+//                     <Mui />
+
+{/* <DatePicker
                                 selected={selectedDate}
                                 onChange={date => setSelectedDate(date)}
                                 dateFormat='MMMM d, yyyy'
@@ -46,14 +70,11 @@ function Button(props) {
 
                                 />
                             </div> */}
-                        </div>
-                        <div>
-                            <DatePicker />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-};
-export default Button;
+        //                 </div>
+        //                 <div>
+        //                     <DatePicker />
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>

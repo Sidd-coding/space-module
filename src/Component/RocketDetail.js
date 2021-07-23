@@ -3,6 +3,7 @@ import Launch from './RocketDetails/Launch'
 import Country from './RocketDetails/Country';
 import RocketName from './RocketDetails/RockeName';
 import SuccessRate from './RocketDetails/SuccessrRate';
+// import Popup from './Modal/Popup';
 
 const RocketDetail = (props) => {
 
@@ -30,6 +31,7 @@ const RocketDetail = (props) => {
                     </div>
                 </div>
             </div>
+            {/* <Popup></Popup> */}
         </div>
     )
 };
