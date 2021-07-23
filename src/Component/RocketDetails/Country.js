@@ -8,7 +8,7 @@ const Country = props => {
                 {props.title}
             </div>
             <div className="col-sm-9 col-9 fs-5 col-md-6 pt-1 text-right
-                            ">
+                            text-nowrap">
                 {props.value}
             </div>
         </div>
