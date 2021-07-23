@@ -16,13 +16,15 @@ function Button(props) {
                     <div className="items">
                         <div className="left">
                             <div className="mr_4">
-                                <button className="selected" autoFocus>All</button>
+                                <button className="selected"
+                                    autoFocus
+                                    onClick={props.allRocket}>All</button>
                             </div>
                             <div className="mr_4">
-                                <button className="">Upcoming</button>
+                                <button className="" onClick={props.upcomingRocket}>Upcoming</button>
                             </div>
                             <div className="mr_4">
-                                <button className="">Past</button>
+                                <button className="" onClick={props.pastRocket}>Past</button>
                             </div>
                             <Mui />
                         </div>
