@@ -2,21 +2,15 @@ import React from 'react';
 
 const Mui = () => {
   return (
-    <div className="filter mb-5">
-      <div className="container">
-        <div className="items">
-          <div className="right">
-            <div className="mr_4">
-              Successful
-              <label className="switch">
-                <input type="checkbox" />
-                <span className="slider"></span>
-              </label>
-            </div>
-          </div>
-        </div >
+    <div className="right">
+      <div className="mr_4">
+        Successful
+        <label className="switch">
+          <input type="checkbox" />
+          <span className="slider"></span>
+        </label>
       </div>
-    </div >
+    </div>
   )
 };
 

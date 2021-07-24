@@ -11,7 +11,7 @@ function Button(props) {
     // const [selectedEndDate, setSelectedEndDate] = useState(null)
     return (
         <div className="app-bar">
-            <div className="filter mb-5">
+            <div className="filter">
                 <div className="container">
                     <div className="items">
                         <div className="left">
@@ -26,8 +26,8 @@ function Button(props) {
                             <div className="mr_4">
                                 <button className="" onClick={props.pastRocket}>Past</button>
                             </div>
-                            <Mui />
                         </div>
+                        <Mui />
 
                     </div>
                 </div>
