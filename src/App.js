@@ -7,15 +7,14 @@ import RocketDetail from './Component/RocketDetail';
 import Button from './Component/Button';
 
 
-
-
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
       rockets: [],
-      allrockets: []
+      allrockets: [],
+      checked: false,
     }
   }
 
@@ -53,6 +52,15 @@ class App extends Component {
     console.log(past);
   }
 
+  muiRocketHandler = () => {
+    console.log("test");
+    const muiHandler = this.state.allrockets.filter(mui => mui.success_rate_pct === 100)
+    this.setState({
+      rockets: this.state.checked ? this.state.allrockets : muiHandler,
+      checked: !this.state.checked,
+    })
+  }
+
   render() {
     console.log(this.state.rockets);
     return (
@@ -60,7 +68,9 @@ class App extends Component {
         <Header />
         <Button upcomingRocket={this.upcomingRocketHandler}
           pastRocket={this.pastRocketHandler}
-          allRocket={this.allRocketHandler} />
+          allRocket={this.allRocketHandler}
+          muiRocket={this.muiRocketHandler} />
+
 
         <div>
           <br />

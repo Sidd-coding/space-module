@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Mui = () => {
+const Mui = (props) => {
   return (
     <div className="right">
       <div className="mr_4">
         Successful
-        <label className="switch">
-          <input type="checkbox" />
-          <span className="slider"></span>
+        <label className="switch" >
+          <input type="checkbox" onChange={props.muiRocket} checked={props.checked} />
+          <span className="slider" ></span>
         </label>
       </div>
     </div>
@@ -17,6 +17,8 @@ const Mui = () => {
 export default Mui;
 
 
+
+// onClick = { props.muiRocket }
 
         // <div class="MuiFormGroup-root">
     //   <label class="MuiFormControlLabel-root 

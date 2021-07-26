@@ -9,6 +9,7 @@ import Mui from './Mui';
 function Button(props) {
     // const [selectedDate, setSelectedDate] = useState(null)
     // const [selectedEndDate, setSelectedEndDate] = useState(null)
+
     return (
         <div className="app-bar">
             <div className="filter">
@@ -27,7 +28,7 @@ function Button(props) {
                                 <button className="" onClick={props.pastRocket}>Past</button>
                             </div>
                         </div>
-                        <Mui />
+                        <Mui muiRocket={props.muiRocket} checked={props.checked} />
 
                     </div>
                 </div>
